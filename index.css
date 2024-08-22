@@ -38,6 +38,10 @@ body {
     margin: 0 15px;
     font-size: 18px;
 }
+.navbar .nav-links a:hover{
+    background-color: #5A4EAE;
+    color: whitesmoke;
+}
 
 .navbar .button-section {
     display: flex;
@@ -60,13 +64,20 @@ body {
 }
 
 /*container*/
-.header{
+.header {
     background-color: whitesmoke;
     border-radius: 25px;
     margin: 45px;
     text-align: center;
+    padding: 20px;
+    height: 100vh; /* Ensures the container takes up the full viewport height */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.j{
+
+.j {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,41 +85,57 @@ body {
     font-size: 30px;
     color: whitesmoke;
 }
-.container{
+
+.container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-left: 20px;
-    margin-top: 10px;
-    margin-right: 20px;
+    gap: 10px; /* Adds some spacing between the columns */
+    width: 100%; /* Ensure the grid takes full width */
+    align-items: center; /* Vertically centers the content */
 }
-.head{
-    width: 80%;
+
+.head {
     padding-left: 2%;
     position: relative;
-}
-.head img{
-    width: 80%;
-    margin-left: 90px;
-}
-.h1{
     display: flex;
-    font-weight: bold;
-    font-size: 64px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.head img {
+    width: 120%;
+    height: 100%; /* Ensures the image matches the container's height */
+    object-fit: cover; /* Maintains aspect ratio */
+    margin-left: 500px;
+
+}
+
+.h1 {
+    font-weight: 900; /* Set the boldness to the maximum */
+    font-size: 65px;
     color: #5A4EAE;
+    text-align: left; /* Align text to the left */
 }
-.h{
-    display: flex;
+
+.h {
     font-weight: bold;
-    font-size: 64px;
+    font-size: 65px;
+    font-weight: 900;
     color: #F66D4B;
-}
-.p{
+    text-align: left;
     display: flex;
-    text-align: justify;
+}
+
+.p {
+    text-align: left; /* Align paragraph to the left */
     font-size: 20px;
     color: #5A4EAE;
 }
-.btn{
+
+
+.btn {
     text-decoration: none;
     background-color: whitesmoke;
     color: #5A4EAE;
@@ -116,9 +143,13 @@ body {
     font-weight: 500;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 5px; /* Added for a rounded button */
+    display: inline-block;
+    margin: 20px 0;
+    align-self: flex-start;
 }
-.btn:hover
-{
+
+.btn:hover {
     color: white;
     background-color: #5A4EAE;
     transition-delay: 0.2s;
@@ -166,13 +197,13 @@ body {
     margin: 0; /* Removed margin as it's now inside the header */
 }
 
-.card {
+.cardb {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 340px;
-    height: 400px;
+    width: 450px;
+    height: 650px;
     text-align: center;
     overflow: hidden;
 }
@@ -298,35 +329,37 @@ body {
 .card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    max-width: 1200px; /* Adjust as needed */
-    width: 100%;
-    padding: 20px;
-}
-.card {
-    display: flex;
-    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
     align-items: center;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
+    width: auto;
+    margin: 0 auto;
 }
-.card img {
+
+.cardi {
+    width: 613px; /* Fixing card width to match image size */
+    height: 750px;
+    box-sizing: border-box;
+}
+
+.cardi img {
     width: 100%;
-    height: auto;
+    height: 613px;
+    object-fit: cover;
 }
+
 .card-text {
-    padding: 20px;
-    color: #555;
-    font-size: 1em;
-    line-height: 1.5;
+    padding: 10px;
+    text-align: center; /* Centering text within each card */
 }
 .card-text .h{
     color: #5A4EAE;
-    font-size: 25px;
+    font-size: 30px;
 }
+.card-text p {
+    color: #5A4EAE;
+}
+
 /*why choose us*/
 .m {
     text-align: center;
@@ -472,7 +505,7 @@ p {
     gap: 30px;
     width: 80%;
     height: 70%;
-    background: url('https://via.placeholder.com/500') left/500px 700px no-repeat;
+    background: url('./image/client.jpg') left/500px 700px no-repeat;
     padding-left: 530px; /* to account for image size and gap */
     box-sizing: border-box;
 }
